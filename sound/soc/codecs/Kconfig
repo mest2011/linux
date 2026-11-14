@@ -1449,6 +1449,17 @@ config SND_SOC_MAX98926
 	tristate
 	depends on I2C
 
+config SND_SOC_MAX98937
+	tristate "Maxim Integrated MAX98937 Speaker Amplifier"
+	depends on I2C
+	select REGMAP_I2C
+	help
+	  Enable support for the Maxim Integrated MAX98937 boosted
+	  class-D speaker amplifier, found in the Xiaomi Redmi Note 7.
+	  The driver is minimal: playback over I2S, with speaker and
+	  digital gain controls. Say M to build it as a module, which
+	  will be called snd-soc-max98937.
+
 config SND_SOC_MAX98927
 	tristate "Maxim Integrated MAX98927 Speaker Amplifier"
 	depends on I2C
